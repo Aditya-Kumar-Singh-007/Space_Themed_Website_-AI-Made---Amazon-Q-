@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Explorer - Journey Through Space</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🚀 Cosmic Explorer</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#planets" class="nav-link">Planets</a></li>
+                <li><a href="#missions" class="nav-link">Missions</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Explore the Infinite Universe</h1>
+            <p class="hero-subtitle">Embark on an extraordinary journey through space and discover the wonders of our cosmos</p>
+            <button class="cta-button" onclick="scrollToSection('planets')">Begin Journey</button>
+        </div>
+        <div class="floating-astronaut">🧑‍🚀</div>
+    </section>
+
+    <section id="planets" class="planets-section">
+        <div class="container">
+            <h2 class="section-title">Planetary System</h2>
+            <div class="solar-system">
+                <div class="sun">☀️</div>
+                <div class="planet mercury" data-planet="Mercury">☿️</div>
+                <div class="planet venus" data-planet="Venus">♀️</div>
+                <div class="planet earth" data-planet="Earth">🌍</div>
+                <div class="planet mars" data-planet="Mars">♂️</div>
+                <div class="planet jupiter" data-planet="Jupiter">🪐</div>
+                <div class="planet saturn" data-planet="Saturn">🪐</div>
+            </div>
+            <div class="planet-info" id="planet-info">
+                <h3 id="planet-name">Select a planet</h3>
+                <p id="planet-description">Click on any planet to learn more about it</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="missions" class="missions-section">
+        <div class="container">
+            <h2 class="section-title">Space Missions</h2>
+            <div class="missions-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">🚀</div>
+                    <h3>Mars Exploration</h3>
+                    <p>Discover the red planet and search for signs of life</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                    <span class="progress-text">75% Complete</span>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🛰️</div>
+                    <h3>Satellite Network</h3>
+                    <p>Deploy advanced communication satellites</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%"></div>
+                    </div>
+                    <span class="progress-text">90% Complete</span>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🌌</div>
+                    <h3>Deep Space Probe</h3>
+                    <p>Explore the outer reaches of our solar system</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%"></div>
+                    </div>
+                    <span class="progress-text">45% Complete</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Cosmic Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal('img1')">
+                    <div class="galaxy-bg galaxy1"></div>
+                    <div class="gallery-overlay">
+                        <h3>Nebula Formation</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('img2')">
+                    <div class="galaxy-bg galaxy2"></div>
+                    <div class="gallery-overlay">
+                        <h3>Black Hole</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('img3')">
+                    <div class="galaxy-bg galaxy3"></div>
+                    <div class="gallery-overlay">
+                        <h3>Star Cluster</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openModal('img4')">
+                    <div class="galaxy-bg galaxy4"></div>
+                    <div class="gallery-overlay">
+                        <h3>Galaxy Spiral</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Mission Control</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="submit-btn">Send Transmission</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span class="icon">📡</span>
+                        <div>
+                            <h4>Communication</h4>
+                            <p>contact@cosmicexplorer.space</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">🌍</span>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Space Station Alpha</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">⏰</span>
+                        <div>
+                            <h4>Mission Hours</h4>
+                            <p>24/7 Galactic Time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div id="modalCaption"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Cosmic Explorer. Journey to the stars.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
